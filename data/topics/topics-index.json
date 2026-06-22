@@ -1,12 +1,43 @@
 [
   {
+    "id": "consumer-theory",
+    "title": "Consumer Theory & Choice",
+    "description": "Utility, scarcity, opportunity cost, consumer equilibrium, and the law of diminishing marginal utility"
+  },
+  {
     "id": "demand-supply-elasticity",
     "title": "Demand, Supply & Elasticity",
     "description": "Law of demand and supply, equilibrium, elasticity, and market movements"
   },
   {
-    "id": "consumer-theory",
-    "title": "Consumer Theory & Choice",
-    "description": "Utility, scarcity, opportunity cost, consumer equilibrium, and the law of diminishing marginal utility"
+    "id": "production-costs",
+    "title": "Production & Costs",
+    "description": "Short-run production, cost curves, and the relationship between marginal product and marginal cost"
+  },
+  {
+    "id": "market-structures",
+    "title": "Market Structures",
+    "description": "Perfect competition, monopoly, oligopoly, and monopolistic competition with Ethiopian examples"
+  },
+  {
+    "id": "banking-growth",
+    "title": "Banking, Finance & Economic Growth",
+    "description": "Ethiopian banking institutions, financial intermediaries, economic growth vs development, and the business cycle"
+  },
+  {
+    "id": "national-income-macro",
+    "title": "National Income & Macroeconomics",
+    "description": "GDP measurement, national income accounting, consumption and saving functions, and aggregate demand and supply"
+  },
+  {
+    "id": "trade-development",
+    "title": "Trade, Development & Ethiopia's Sectors",
+    "description": "International trade theories, balance of payments, development indicators, and Ethiopian sectoral policies"
+  },
+  {
+    "id": "policy-market-failure",
+    "title": "Policy, Market Failure & Ethiopian Reforms",
+    "description": "Market failures, fiscal and monetary policy, taxation, and Ethiopia's macroeconomic reforms",
+  "questions"
   }
 ]
