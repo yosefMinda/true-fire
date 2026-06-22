@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TrueFIRE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --brand:    #F5A623;
+      --bg:       #111318;
+      --fg:       #F0EEE9;
+      --fg-muted: rgba(240,238,233,0.5);
+      --fg-dim:   rgba(240,238,233,0.35);
+      --surface:  rgba(240,238,233,0.05);
+      --border:   rgba(240,238,233,0.12);
+      --correct:  #22C55E;
+      --incorrect:#EF4444;
+      --correct-text:  #4ade80;
+      --incorrect-text:#f87171;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+    }
+
+    html, body {
+      height: 100%;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    #app {
+      max-width: 480px;
+      min-height: 100dvh;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Screens ── */
+    .screen { display: none; flex-direction: column; flex: 1; }
+    .screen.active { display: flex; }
+
+    /* ── Loading ── */
+    #screen-loading {
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+    .loading-brand { font-size: 26px; font-weight: 700; color: var(--brand); letter-spacing: -0.5px; }
+    .loading-sub { font-size: 13px; color: var(--fg-muted); }
+
+    /* ── Error ── */
+    #screen-error {
+      align-items: center;
+      justify-content: center;
+      padding: 32px;
+      text-align: center;
+      gap: 12px;
+    }
+    .error-title { font-size: 17px; font-weight: 500; }
+    .error-msg { font-size: 13px; color: var(--fg-muted); line-height: 1.6; }
+    .btn-retry {
+      margin-top: 8px;
+      padding: 12px 28px;
+      background: var(--brand);
+      color: var(--bg);
+      border: none;
+      border-radius: var(--radius-md);
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    /* ── Screen 1: Topic Picker ── */
+    .s1-header {
+      padding: 32px 20px 18px;
+      border-bottom: 0.5px solid var(--border);
+    }
+    .s1-brand { font-size: 24px; font-weight: 700; color: var(--brand); letter-spacing: -0.5px; }
+    .s1-tagline { font-size: 13px; color: var(--fg-muted); margin-top: 4px; }
+    .s1-welcome { padding: 20px 20px 10px; font-size: 15px; color: var(--fg-muted); line-height: 1.6; }
+    .s1-label { padding: 0 20px 10px; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--fg-dim); }
+    .topic-list { padding: 0 20px 32px; display: flex; flex-direction: column; gap: 10px; }
+
+    .topic-card {
+      background: var(--surface);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 16px 18px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      transition: background 0.15s, border-color 0.15s;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .topic-card:hover  { background: rgba(245,166,35,0.1); border-color: rgba(245,166,35,0.4); }
+    .topic-card:active { transform: scale(0.98); }
+    .topic-name { font-size: 15px; font-weight: 500; }
+    .topic-meta { font-size: 12px; color: var(--fg-muted); margin-top: 3px; line-height: 1.4; }
+    .topic-count { font-size: 11px; color: var(--fg-dim); margin-top: 4px; }
+    .topic-arrow { color: var(--brand); font-size: 20px; flex-shrink: 0; }
+
+    /* ── Screen 2: Drill ── */
+    .drill-header {
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 0.5px solid rgba(240,238,233,0.08);
+      flex-shrink: 0;
+    }
+    .btn-back {
+      background: none; border: none;
+      color: var(--fg-muted); cursor: pointer;
+      font-size: 22px; padding: 2px; line-height: 1;
+      transition: color 0.15s;
+    }
+    .btn-back:hover { color: var(--fg); }
+    .drill-topic-name { font-size: 13px; color: var(--fg-muted); flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+    .streak-badge { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
+    .streak-fire { font-size: 16px; opacity: 0; transition: opacity 0.3s; }
+    .streak-fire.on { opacity: 1; }
+    .streak-num { font-size: 14px; font-weight: 600; color: var(--brand); min-width: 16px; text-align: right; }
+
+    .progress-bar-track { height: 3px; background: rgba(240,238,233,0.08); flex-shrink: 0; }
+    .progress-bar-fill  { height: 100%; background: var(--brand); transition: width 0.35s ease; }
+
+    .drill-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 24px 20px 24px;
+      transition: background 0.18s ease;
+      overflow-y: auto;
+    }
+    .drill-body.correct   { background: rgba(34,197,94,0.12); }
+    .drill-body.incorrect { background: rgba(239,68,68,0.12); }
+
+    .progress-label { font-size: 12px; color: var(--fg-dim); letter-spacing: 0.5px; margin-bottom: 20px; }
+
+    .statement-wrap { flex: 1; display: flex; align-items: center; }
+    .statement-text { font-size: 20px; font-weight: 500; line-height: 1.5; letter-spacing: -0.2px; }
+
+    .verdict-row {
+      display: flex; align-items: center; gap: 8px;
+      margin-top: 22px;
+      opacity: 0; transform: translateY(6px);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+    .verdict-row.show { opacity: 1; transform: translateY(0); }
+    .verdict-badge {
+      font-size: 12px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; padding: 4px 12px; border-radius: 4px;
+    }
+    .verdict-badge.correct   { background: rgba(34,197,94,0.18);  color: var(--correct-text); }
+    .verdict-badge.incorrect { background: rgba(239,68,68,0.18);   color: var(--incorrect-text); }
+
+    .payload-box {
+      margin-top: 12px;
+      padding: 14px 16px;
+      background: rgba(240,238,233,0.06);
+      border-left: 3px solid rgba(240,238,233,0.2);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      font-size: 14px; line-height: 1.65; color: rgba(240,238,233,0.82);
+      opacity: 0; transform: translateY(8px);
+      transition: opacity 0.22s ease 0.08s, transform 0.22s ease 0.08s;
+    }
+    .payload-box.show { opacity: 1; transform: translateY(0); }
+    .payload-box.correct-border   { border-left-color: var(--correct-text); }
+    .payload-box.incorrect-border { border-left-color: var(--incorrect-text); }
+    .payload-box strong { color: var(--fg); font-weight: 600; }
+
+    .btn-row { display: flex; gap: 10px; margin-top: 24px; flex-shrink: 0; }
+    .btn-tf {
+      flex: 1; padding: 20px 0;
+      border-radius: var(--radius-lg);
+      border: 0.5px solid rgba(240,238,233,0.18);
+      background: rgba(240,238,233,0.08);
+      color: var(--fg);
+      font-family: inherit; font-size: 15px; font-weight: 700;
+      letter-spacing: 1.8px; text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.12s, border-color 0.12s, transform 0.08s;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .btn-tf:disabled { opacity: 0.4; cursor: not-allowed; }
+    .btn-tf:not(:disabled):active { transform: scale(0.97); }
+    .btn-true:not(:disabled):hover  { background: rgba(34,197,94,0.18);  border-color: rgba(34,197,94,0.4); }
+    .btn-false:not(:disabled):hover { background: rgba(239,68,68,0.18);   border-color: rgba(239,68,68,0.4); }
+
+    .btn-next {
+      width: 100%; margin-top: 14px; padding: 17px;
+      border: none; border-radius: var(--radius-lg);
+      background: var(--brand); color: var(--bg);
+      font-family: inherit; font-size: 15px; font-weight: 700;
+      cursor: pointer; letter-spacing: 0.4px;
+      opacity: 0; transition: opacity 0.2s, transform 0.08s;
+      flex-shrink: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .btn-next:active { transform: scale(0.98); }
+    .btn-next.show { opacity: 1; }
+    .btn-next.locked { opacity: 0.38; cursor: not-allowed; pointer-events: none; }
+    .btn-next.gotit  { background: rgba(240,238,233,0.12); color: var(--fg); border: 0.5px solid rgba(240,238,233,0.18); }
+
+    /* ── Screen 3: Summary ── */
+    .s3-header { padding: 28px 20px 20px; border-bottom: 0.5px solid var(--border); }
+    .s3-eyebrow { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--brand); font-weight: 700; margin-bottom: 10px; }
+    .s3-score { font-size: 40px; font-weight: 700; letter-spacing: -1.5px; line-height: 1; }
+    .s3-score-denom { font-size: 20px; font-weight: 400; color: var(--fg-muted); }
+    .s3-score-label { font-size: 16px; font-weight: 400; color: var(--fg-muted); margin-left: 4px; }
+    .s3-streak-line { font-size: 14px; color: var(--fg-muted); margin-top: 8px; }
+    .s3-streak-line strong { color: var(--brand); }
+
+    .s3-section-label { padding: 16px 20px 8px; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--fg-dim); }
+    .s3-list { padding: 0 20px; display: flex; flex-direction: column; gap: 8px; overflow-y: auto; flex: 1; padding-bottom: 16px; }
+
+    .s3-item {
+      padding: 12px 14px;
+      border-radius: var(--radius-md);
+      border: 0.5px solid rgba(240,238,233,0.08);
+      background: rgba(240,238,233,0.04);
+    }
+    .s3-item.wrong { border-color: rgba(239,68,68,0.25); background: rgba(239,68,68,0.07); }
+    .s3-item-stmt  { font-size: 13px; color: rgba(240,238,233,0.85); line-height: 1.45; margin-bottom: 7px; }
+    .s3-item-meta  { font-size: 12px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .s3-item-you   { color: var(--fg-muted); }
+    .s3-label-correct   { color: var(--correct-text); font-weight: 500; }
+    .s3-label-incorrect { color: var(--incorrect-text); font-weight: 500; }
+
+    .s3-cta { padding: 16px 20px 28px; display: flex; gap: 10px; flex-shrink: 0; }
+    .btn-repeat {
+      flex: 1; padding: 15px;
+      background: var(--brand); color: var(--bg);
+      border: none; border-radius: var(--radius-lg);
+      font-family: inherit; font-size: 14px; font-weight: 700;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .btn-repeat:active { transform: scale(0.97); }
+    .btn-pick-another {
+      flex: 1; padding: 15px;
+      background: rgba(240,238,233,0.07); color: var(--fg);
+      border: 0.5px solid rgba(240,238,233,0.15); border-radius: var(--radius-lg);
+      font-family: inherit; font-size: 14px; font-weight: 500;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .btn-pick-another:active { transform: scale(0.97); }
+  </style>
+</head>
+<body>
+<div id="app">
+
+  <!-- Loading -->
+  <div class="screen active" id="screen-loading">
+    <div class="loading-brand">TrueFIRE</div>
+    <div class="loading-sub">Loading topics…</div>
+  </div>
+
+  <!-- Error -->
+  <div class="screen" id="screen-error">
+    <div class="error-title">Couldn't load topics</div>
+    <p class="error-msg" id="error-msg">Make sure the app is served from a local server (not opened as a file).</p>
+    <button class="btn-retry" id="btn-retry">Retry</button>
+  </div>
+
+  <!-- Screen 1: Topic Picker -->
+  <div class="screen" id="screen-pick">
+    <div class="s1-header">
+      <div class="s1-brand">TrueFIRE</div>
+      <div class="s1-tagline">Foundational Drill Engine</div>
+    </div>
+    <div class="s1-welcome">Pick a topic and start drilling.</div>
+    <div class="s1-label" id="s1-subject-label">Topics</div>
+    <div class="topic-list" id="topic-list"></div>
+  </div>
+
+  <!-- Screen 2: Drill -->
+  <div class="screen" id="screen-drill">
+    <div class="drill-header">
+      <button class="btn-back" id="btn-back" aria-label="Back to topics">&#8592;</button>
+      <span class="drill-topic-name" id="drill-topic-name"></span>
+      <div class="streak-badge">
+        <span class="streak-fire" id="streak-fire">🔥</span>
+        <span class="streak-num" id="streak-num">0</span>
+      </div>
+    </div>
+    <div class="progress-bar-track">
+      <div class="progress-bar-fill" id="progress-fill" style="width:0%"></div>
+    </div>
+    <div class="drill-body" id="drill-body">
+      <div class="progress-label" id="progress-label">1 / 0</div>
+      <div class="statement-wrap">
+        <p class="statement-text" id="statement-text"></p>
+      </div>
+      <div class="verdict-row" id="verdict-row">
+        <span class="verdict-badge" id="verdict-badge"></span>
+      </div>
+      <div class="payload-box" id="payload-box"></div>
+      <div class="btn-row" id="tf-buttons">
+        <button class="btn-tf btn-true"  id="btn-true">True</button>
+        <button class="btn-tf btn-false" id="btn-false">False</button>
+      </div>
+      <button class="btn-next" id="btn-next">Next</button>
+    </div>
+  </div>
+
+  <!-- Screen 3: Summary -->
+  <div class="screen" id="screen-summary">
+    <div class="s3-header">
+      <div class="s3-eyebrow">TrueFIRE</div>
+      <div class="s3-score">
+        <span id="s3-correct">0</span><span class="s3-score-denom"> / <span id="s3-total">0</span></span><span class="s3-score-label"> correct</span>
+      </div>
+      <div class="s3-streak-line">Best streak: <strong id="s3-streak">0</strong> 🔥</div>
+    </div>
+    <div class="s3-section-label">Review</div>
+    <div class="s3-list" id="s3-list"></div>
+    <div class="s3-cta">
+      <button class="btn-repeat" id="btn-repeat">Repeat this set</button>
+      <button class="btn-pick-another" id="btn-pick-another">New topic</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  /* ── CONFIG ── */
+  const INDEX_PATH = 'data/topics/topics-index.json';
+  const TOPIC_PATH = (id) => `data/topics/${id}.json`;
+
+  /* ── STATE ── */
+  let topicsIndex   = [];
+  let currentTopic  = null;
+  let questions     = [];
+  let currentIndex  = 0;
+  let step          = 'blind'; // blind | answered
+  let streak        = 0;
+  let bestStreak    = 0;
+  let sessionLog    = [];
+  let gotItTimeout  = null;
+
+  /* ── UTILS ── */
+  function showScreen(id) {
+    document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+  }
+
+  function shuffle(arr) {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  /* ── BOOT: load topics index ── */
+  async function boot() {
+    try {
+      const res = await fetch(INDEX_PATH);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      topicsIndex = await res.json();
+      renderTopicList();
+      showScreen('screen-pick');
+    } catch (err) {
+      document.getElementById('error-msg').textContent =
+        `Could not load topics-index.json. Make sure you're running a local server (e.g. npx serve). Error: ${err.message}`;
+      showScreen('screen-error');
+    }
+  }
+
+  /* ── SCREEN 1 ── */
+  function renderTopicList() {
+    const list = document.getElementById('topic-list');
+    list.innerHTML = topicsIndex.map(t => `
+      <div class="topic-card" data-id="${t.id}" tabindex="0" role="button" aria-label="Start ${t.title}">
+        <div>
+          <div class="topic-name">${t.title}</div>
+          <div class="topic-meta">${t.description}</div>
+        </div>
+        <span class="topic-arrow">&#8250;</span>
+      </div>
+    `).join('');
+
+    list.querySelectorAll('.topic-card').forEach(card => {
+      card.addEventListener('click', () => loadTopic(card.dataset.id));
+      card.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') loadTopic(card.dataset.id);
+      });
+    });
+  }
+
+  /* ── LOAD TOPIC (fetch JSON on demand) ── */
+  async function loadTopic(id) {
+    try {
+      const res = await fetch(TOPIC_PATH(id));
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      currentTopic = data;
+      startDrill(data);
+    } catch (err) {
+      alert(`Couldn't load topic "${id}". Check that the JSON file exists.\n\n${err.message}`);
+    }
+  }
+
+  /* ── SCREEN 2: Drill ── */
+  function startDrill(topicData) {
+    questions    = shuffle(topicData.questions);
+    currentIndex = 0;
+    streak       = 0;
+    bestStreak   = 0;
+    sessionLog   = [];
+
+    document.getElementById('drill-topic-name').textContent = topicData.title;
+    showScreen('screen-drill');
+    renderQuestion();
+  }
+
+  function renderQuestion() {
+    step = 'blind';
+    clearTimeout(gotItTimeout);
+
+    const q     = questions[currentIndex];
+    const total = questions.length;
+    const pct   = (currentIndex / total) * 100;
+
+    document.getElementById('progress-label').textContent = `${currentIndex + 1} / ${total}`;
+    document.getElementById('progress-fill').style.width  = `${pct}%`;
+    document.getElementById('statement-text').textContent = q.statement;
+    document.getElementById('streak-num').textContent     = streak;
+    document.getElementById('streak-fire').classList.toggle('on', streak >= 5);
+
+    /* reset body color */
+    const body = document.getElementById('drill-body');
+    body.classList.remove('correct', 'incorrect');
+
+    /* reset verdict + payload */
+    document.getElementById('verdict-row').classList.remove('show');
+    const pb = document.getElementById('payload-box');
+    pb.classList.remove('show', 'correct-border', 'incorrect-border');
+    pb.innerHTML = '';
+
+    /* reset buttons */
+    document.getElementById('tf-buttons').style.display = 'flex';
+    document.getElementById('btn-true').disabled  = false;
+    document.getElementById('btn-false').disabled = false;
+
+    /* reset next button */
+    const next = document.getElementById('btn-next');
+    next.className = 'btn-next';
+    next.textContent = currentIndex + 1 >= total ? 'See results' : 'Next';
+  }
+
+  function submitAnswer(userAnswer) {
+    if (step !== 'blind') return;
+    step = 'answered';
+
+    const q         = questions[currentIndex];
+    const isCorrect = (userAnswer === q.answer);
+
+    /* haptic */
+    if (navigator.vibrate) navigator.vibrate(isCorrect ? [30] : [80, 30, 80]);
+
+    /* disable buttons */
+    document.getElementById('btn-true').disabled  = true;
+    document.getElementById('btn-false').disabled = true;
+
+    /* body color */
+    const body = document.getElementById('drill-body');
+    body.classList.add(isCorrect ? 'correct' : 'incorrect');
+
+    /* verdict badge */
+    const vRow   = document.getElementById('verdict-row');
+    const vBadge = document.getElementById('verdict-badge');
+    vBadge.textContent = isCorrect ? 'Correct' : 'Incorrect';
+    vBadge.className   = `verdict-badge ${isCorrect ? 'correct' : 'incorrect'}`;
+    vRow.classList.add('show');
+
+    /* payload */
+    const pb = document.getElementById('payload-box');
+    pb.innerHTML = q.payload;
+    pb.classList.add('show', isCorrect ? 'correct-border' : 'incorrect-border');
+
+    /* streak */
+    if (isCorrect) {
+      streak++;
+      if (streak > bestStreak) bestStreak = streak;
+    } else {
+      streak = 0;
+    }
+    document.getElementById('streak-num').textContent = streak;
+    document.getElementById('streak-fire').classList.toggle('on', streak >= 5);
+
+    /* log */
+    sessionLog.push({ q, userAnswer, isCorrect });
+
+    /* next button */
+    const next = document.getElementById('btn-next');
+    const isLast = currentIndex + 1 >= questions.length;
+
+    if (isCorrect) {
+      next.textContent = isLast ? 'See results' : 'Next';
+      next.classList.add('show');
+    } else {
+      next.textContent = 'Got it';
+      next.classList.add('show', 'gotit', 'locked');
+      gotItTimeout = setTimeout(() => next.classList.remove('locked'), 2500);
+    }
+  }
+
+  function advance() {
+    currentIndex++;
+    if (currentIndex >= questions.length) {
+      showSummary();
+    } else {
+      renderQuestion();
+    }
+  }
+
+  /* ── SCREEN 3: Summary ── */
+  function showSummary() {
+    const correct = sessionLog.filter(a => a.isCorrect).length;
+    document.getElementById('s3-correct').textContent = correct;
+    document.getElementById('s3-total').textContent   = questions.length;
+    document.getElementById('s3-streak').textContent  = bestStreak;
+
+    document.getElementById('progress-fill').style.width = '100%';
+
+    const list = document.getElementById('s3-list');
+    list.innerHTML = sessionLog.map(entry => {
+      const userLabel    = entry.userAnswer ? 'True' : 'False';
+      const correctLabel = entry.q.answer   ? 'True' : 'False';
+      return `
+        <div class="s3-item ${entry.isCorrect ? '' : 'wrong'}">
+          <div class="s3-item-stmt">${entry.q.statement}</div>
+          <div class="s3-item-meta">
+            <span class="s3-item-you">
+              You: <span class="${entry.isCorrect ? 's3-label-correct' : 's3-label-incorrect'}">${userLabel}</span>
+            </span>
+            ${!entry.isCorrect
+              ? `<span class="s3-item-you">Answer: <span class="s3-label-correct">${correctLabel}</span></span>`
+              : ''}
+          </div>
+        </div>`;
+    }).join('');
+
+    showScreen('screen-summary');
+  }
+
+  /* ── EVENT LISTENERS ── */
+  document.getElementById('btn-true').addEventListener('click',  () => submitAnswer(true));
+  document.getElementById('btn-false').addEventListener('click', () => submitAnswer(false));
+
+  document.getElementById('btn-next').addEventListener('click', function () {
+    if (this.classList.contains('locked')) return;
+    advance();
+  });
+
+  document.getElementById('btn-back').addEventListener('click', () => showScreen('screen-pick'));
+
+  document.getElementById('btn-repeat').addEventListener('click', () => {
+    if (currentTopic) startDrill(currentTopic);
+  });
+
+  document.getElementById('btn-pick-another').addEventListener('click', () => showScreen('screen-pick'));
+
+  document.getElementById('btn-retry').addEventListener('click', () => {
+    showScreen('screen-loading');
+    boot();
+  });
+
+  /* ── INIT ── */
+  boot();
+</script>
+</body>
+</html>

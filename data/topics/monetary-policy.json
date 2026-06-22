@@ -1,0 +1,92 @@
+{
+  "id": "monetary-policy",
+  "title": "Monetary Policy",
+  "description": "Central bank tools, interest rates, money supply",
+  "questions": [
+    {
+      "statement": "When the Central Bank raises the discount rate, commercial banks are encouraged to borrow more money.",
+      "answer": false,
+      "payload": "Raising the discount rate makes borrowing <strong>more expensive</strong>, discouraging commercial banks."
+    },
+    {
+      "statement": "Open market operations involve the Central Bank buying and selling government securities.",
+      "answer": true,
+      "payload": "Correct. OMOs are the Central Bank's primary tool for adjusting the money supply through <strong>buying and selling</strong> bonds."
+    },
+    {
+      "statement": "Selling government securities by the Central Bank increases the money supply.",
+      "answer": false,
+      "payload": "Selling securities <strong>removes</strong> money from circulation, decreasing the money supply."
+    },
+    {
+      "statement": "A lower reserve requirement allows commercial banks to lend out more money.",
+      "answer": true,
+      "payload": "Correct. Less money locked in reserves means more available for <strong>lending</strong>, expanding the money supply."
+    },
+    {
+      "statement": "Quantitative easing involves the Central Bank raising interest rates to stimulate growth.",
+      "answer": false,
+      "payload": "QE means buying large amounts of assets to inject money into the economy — it does <strong>not</strong> involve raising rates."
+    },
+    {
+      "statement": "An expansionary monetary policy is used to fight inflation.",
+      "answer": false,
+      "payload": "Expansionary policy <strong>increases</strong> money supply and is used to stimulate growth — not fight inflation. Contractionary policy fights inflation."
+    },
+    {
+      "statement": "When the Central Bank buys government bonds, money supply increases.",
+      "answer": true,
+      "payload": "Correct. Buying bonds <strong>injects</strong> money into the banking system, expanding the money supply."
+    },
+    {
+      "statement": "Raising interest rates tends to reduce consumer spending.",
+      "answer": true,
+      "payload": "Correct. Higher rates make borrowing more costly, discouraging spending and <strong>cooling</strong> the economy."
+    },
+    {
+      "statement": "The money multiplier effect means that an initial deposit creates multiple times that amount in new deposits.",
+      "answer": true,
+      "payload": "Correct. Through repeated lending, an initial deposit is <strong>multiplied</strong> across the banking system."
+    },
+    {
+      "statement": "High inflation typically causes the Central Bank to lower interest rates.",
+      "answer": false,
+      "payload": "The Central Bank raises rates to <strong>reduce</strong> inflation by making borrowing more expensive and slowing spending."
+    },
+    {
+      "statement": "Contractionary monetary policy increases the money supply.",
+      "answer": false,
+      "payload": "Contractionary policy <strong>reduces</strong> the money supply — through higher rates or selling bonds — to slow inflation."
+    },
+    {
+      "statement": "The discount rate is the interest rate commercial banks charge each other for overnight loans.",
+      "answer": false,
+      "payload": "That's the <strong>federal funds rate</strong>. The discount rate is what the Central Bank charges commercial banks directly."
+    },
+    {
+      "statement": "A central bank increasing the reserve requirement is a contractionary policy.",
+      "answer": true,
+      "payload": "Correct. A higher reserve requirement means banks can lend less, <strong>reducing</strong> the money supply."
+    },
+    {
+      "statement": "Open market operations are only effective for increasing the money supply.",
+      "answer": false,
+      "payload": "OMOs work in <strong>both directions</strong>: buying bonds expands supply, selling bonds contracts it."
+    },
+    {
+      "statement": "Low interest rates generally encourage investment by firms.",
+      "answer": true,
+      "payload": "Correct. Cheaper borrowing costs make it easier for firms to <strong>finance</strong> projects and expand."
+    },
+    {
+      "statement": "Monetary policy operates with an immediate effect on the economy.",
+      "answer": false,
+      "payload": "Monetary policy has a <strong>time lag</strong> — changes in interest rates take months to fully filter through to spending and inflation."
+    },
+    {
+      "statement": "When interest rates fall, the value of existing bonds typically rises.",
+      "answer": true,
+      "payload": "Correct. Bond prices and interest rates move <strong>inversely</strong> — lower rates make existing higher-yield bonds more attractive."
+    }
+  ]
+}
