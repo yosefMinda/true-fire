@@ -1,0 +1,107 @@
+{
+  "id": "market-structures",
+  "title": "Market Structures",
+  "description": "Perfect competition, monopoly, oligopoly, and monopolistic competition with Ethiopian examples",
+  "questions": [
+    {
+      "statement": "In perfect competition, individual firms are price takers.",
+      "answer": true,
+      "payload": "TRUE. No single firm is large enough to influence the <strong>market price</strong>."
+    },
+    {
+      "statement": "A perfectly competitive firm faces a horizontal demand curve.",
+      "answer": true,
+      "payload": "TRUE. The firm can sell any quantity at the market price, making demand <strong>perfectly elastic</strong>."
+    },
+    {
+      "statement": "In perfect competition, marginal revenue equals average revenue equals price.",
+      "answer": true,
+      "payload": "TRUE. <strong>MR = AR = P</strong> because the firm sells every unit at the same market price."
+    },
+    {
+      "statement": "Perfectly competitive firms can earn abnormal profits in the long run.",
+      "answer": false,
+      "payload": "FALSE. Free entry attracts new firms, driving profits down to <strong>normal profit</strong> only."
+    },
+    {
+      "statement": "A monopolist faces a downward-sloping demand curve.",
+      "answer": true,
+      "payload": "TRUE. As the sole supplier, the monopolist faces the entire market demand which slopes <strong>downward</strong>."
+    },
+    {
+      "statement": "In monopoly, marginal revenue is always greater than price.",
+      "answer": false,
+      "payload": "FALSE. MR is <strong>less</strong> than price because the monopolist must lower price to sell more units."
+    },
+    {
+      "statement": "A monopolist maximises profit where MR = MC.",
+      "answer": true,
+      "payload": "TRUE. All profit-maximising firms produce where <strong>MR = MC</strong>, including monopolists."
+    },
+    {
+      "statement": "A monopolist produces at the point where P = MC.",
+      "answer": false,
+      "payload": "FALSE. A monopolist produces where <strong>MR = MC</strong>, and since P > MR, price exceeds marginal cost."
+    },
+    {
+      "statement": "Ethio Telecom before privatisation was an example of a monopoly.",
+      "answer": true,
+      "payload": "TRUE. Ethio Telecom was a single seller with a unique product and <strong>complete entry barriers</strong>."
+    },
+    {
+      "statement": "The teff market in Ethiopia is an example of perfect competition.",
+      "answer": true,
+      "payload": "TRUE. Teff has many sellers, a homogeneous product, and <strong>free entry</strong> into the market."
+    },
+    {
+      "statement": "Oligopoly is characterised by a large number of small firms.",
+      "answer": false,
+      "payload": "FALSE. Oligopoly has a <strong>small number</strong> of large, dominant firms."
+    },
+    {
+      "statement": "In an oligopoly, firms are mutually interdependent in their pricing decisions.",
+      "answer": true,
+      "payload": "TRUE. Each firm must consider rivals' likely reactions before changing <strong>price or output</strong>."
+    },
+    {
+      "statement": "Cement factories in Ethiopia are an example of an oligopoly.",
+      "answer": true,
+      "payload": "TRUE. Cement has a few large producers with <strong>difficult entry</strong> and mutual interdependence."
+    },
+    {
+      "statement": "Monopolistic competition is basically the same as monopoly.",
+      "answer": false,
+      "payload": "FALSE. Monopolistic competition is much closer to <strong>perfect competition</strong> with many firms and free entry."
+    },
+    {
+      "statement": "Product differentiation is a key feature of monopolistic competition.",
+      "answer": true,
+      "payload": "TRUE. Firms sell similar but not identical products, giving them <strong>some price control</strong>."
+    },
+    {
+      "statement": "Hair salons and restaurants in Ethiopia are examples of monopolistic competition.",
+      "answer": true,
+      "payload": "TRUE. They have many sellers, differentiated services, and <strong>relatively free entry</strong>."
+    },
+    {
+      "statement": "In monopolistic competition, there are high barriers to entry.",
+      "answer": false,
+      "payload": "FALSE. Monopolistic competition has <strong>low</strong> barriers to entry, similar to perfect competition."
+    },
+    {
+      "statement": "Monopolistically competitive firms can make abnormal profits in the long run.",
+      "answer": false,
+      "payload": "FALSE. Low barriers to entry attract new firms, eroding profits to <strong>normal profit</strong> only."
+    },
+    {
+      "statement": "In perfect competition, the firm's demand curve is the same as its marginal revenue curve.",
+      "answer": true,
+      "payload": "TRUE. Because price is fixed, every additional unit sold adds exactly the <strong>market price</strong> to revenue."
+    },
+    {
+      "statement": "A natural monopoly arises when one firm can supply the entire market at a lower cost than multiple competing firms.",
+      "answer": true,
+      "payload": "TRUE. High fixed costs mean a single firm benefits from <strong>economies of scale</strong> that rivals cannot match."
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "id": "national-income-macro",
+  "title": "National Income & Macroeconomics",
+  "description": "GDP measurement, national income accounting, consumption and saving functions, and aggregate demand and supply",
+  "questions": [
+    {
+      "statement": "Microeconomics studies the economy as a whole, including GDP and inflation.",
+      "answer": false,
+      "payload": "FALSE. Microeconomics studies <strong>individual units</strong> like households and firms; macro studies the whole economy."
+    },
+    {
+      "statement": "GDP measures the market value of all final goods and services produced within a country's borders.",
+      "answer": true,
+      "payload": "TRUE. GDP counts output produced <strong>within</strong> the country's borders regardless of who produces it."
+    },
+    {
+      "statement": "Remittances sent by Ethiopians working in Dubai are included in Ethiopia's GDP.",
+      "answer": false,
+      "payload": "FALSE. Remittances are included in <strong>GNP</strong>, which counts nationals wherever they are, not in GDP."
+    },
+    {
+      "statement": "In a closed economy with no foreign sector, GNP equals GDP.",
+      "answer": true,
+      "payload": "TRUE. With no cross-border factor income, there is no difference between <strong>GNP and GDP</strong>."
+    },
+    {
+      "statement": "The expenditure approach and income approach to measuring GDP give different conceptual results.",
+      "answer": false,
+      "payload": "FALSE. All three approaches measure the same thing and should give the <strong>same result</strong> in theory."
+    },
+    {
+      "statement": "GDP by the expenditure approach equals C + I + G + (X - M).",
+      "answer": true,
+      "payload": "TRUE. This sums consumption, investment, government spending, and <strong>net exports</strong>."
+    },
+    {
+      "statement": "Nominal GDP is a better measure of real output growth than real GDP.",
+      "answer": false,
+      "payload": "FALSE. Nominal GDP can rise from price increases alone; <strong>real GDP</strong> removes inflation."
+    },
+    {
+      "statement": "Real GDP is measured using base-year prices to remove the effect of inflation.",
+      "answer": true,
+      "payload": "TRUE. Real GDP uses constant prices to show the true change in <strong>output volume</strong>."
+    },
+    {
+      "statement": "The GDP deflator is calculated as (Nominal GDP / Real GDP) x 100.",
+      "answer": true,
+      "payload": "TRUE. The deflator is an implicit price index measuring <strong>overall price level</strong> changes."
+    },
+    {
+      "statement": "MPC + MPS = 1 is always true by definition.",
+      "answer": true,
+      "payload": "TRUE. Any extra income must be either <strong>consumed or saved</strong>, so the fractions sum to 1."
+    },
+    {
+      "statement": "If MPC = 0.8, then MPS = 0.2.",
+      "answer": true,
+      "payload": "TRUE. Since <strong>MPC + MPS = 1</strong>, an MPC of 0.8 implies MPS must be 0.2."
+    },
+    {
+      "statement": "APC + APS = 1 is always true by definition.",
+      "answer": true,
+      "payload": "TRUE. Total income is either consumed or saved, so <strong>APC + APS = 1</strong> at every income level."
+    },
+    {
+      "statement": "The consumption function is written as C = a + bY, where b represents autonomous consumption.",
+      "answer": false,
+      "payload": "FALSE. In C = a + bY, <strong>a</strong> is autonomous consumption and b is the MPC."
+    },
+    {
+      "statement": "Autonomous investment is independent of the level of income or output.",
+      "answer": true,
+      "payload": "TRUE. Autonomous investment is driven by factors like technology and business <strong>confidence</strong>, not income."
+    },
+    {
+      "statement": "Aggregate demand slopes upward because higher prices stimulate more production.",
+      "answer": false,
+      "payload": "FALSE. AD slopes <strong>downward</strong> due to the wealth effect, interest rate effect, and foreign trade effect."
+    },
+    {
+      "statement": "A rise in government spending shifts the AD curve to the right.",
+      "answer": true,
+      "payload": "TRUE. Higher government spending increases total demand at <strong>every price level</strong>."
+    },
+    {
+      "statement": "The short-run aggregate supply curve slopes upward.",
+      "answer": true,
+      "payload": "TRUE. In the short run, higher prices encourage firms to produce <strong>more output</strong>."
+    },
+    {
+      "statement": "The long-run aggregate supply curve is horizontal at the full employment output level.",
+      "answer": false,
+      "payload": "FALSE. Long-run AS is <strong>vertical</strong> at the full employment level of output."
+    },
+    {
+      "statement": "Higher aggregate demand always leads to higher real output regardless of the economy's starting position.",
+      "answer": false,
+      "payload": "FALSE. At full employment, higher AD raises only the <strong>price level</strong>, not real output."
+    },
+    {
+      "statement": "Net National Product equals GNP minus depreciation.",
+      "answer": true,
+      "payload": "TRUE. <strong>NNP = GNP - Depreciation</strong>, accounting for the wearing out of capital."
+    }
+  ]
+}

@@ -6,102 +6,102 @@
     {
       "statement": "Utility means the objective usefulness of a good.",
       "answer": false,
-      "payload": "Utility is subjective **satisfaction**, not objective usefulness."
+      "payload": "FALSE. Utility is subjective <strong>satisfaction</strong>, not objective usefulness."
     },
     {
       "statement": "A cigarette has utility for a smoker even though it is harmful.",
       "answer": true,
-      "payload": "Correct. Utility depends on **personal preference**, not health or usefulness."
+      "payload": "TRUE. Utility depends on <strong>personal preference</strong>, not health or usefulness."
     },
     {
       "statement": "Total utility reaches its maximum when marginal utility becomes zero.",
       "answer": true,
-      "payload": "Correct. When MU is zero, consuming more adds **no satisfaction** and TU peaks."
+      "payload": "TRUE. When MU = 0, consuming more adds <strong>no satisfaction</strong> and TU peaks."
     },
     {
       "statement": "Total utility falls whenever marginal utility is falling.",
       "answer": false,
-      "payload": "TU still rises as long as MU is **positive**, even if MU is falling."
+      "payload": "FALSE. TU still rises as long as MU is <strong>positive</strong>, even when MU is falling."
     },
     {
       "statement": "Marginal utility can become negative.",
       "answer": true,
-      "payload": "Correct. Beyond a certain point, additional units **reduce** total satisfaction."
+      "payload": "TRUE. Beyond a certain point, additional units <strong>reduce</strong> total satisfaction."
     },
     {
       "statement": "Cardinal utility assumes satisfaction can be measured in exact numbers called utils.",
       "answer": true,
-      "payload": "Correct. Cardinal utility treats satisfaction as **quantifiable** in precise units."
+      "payload": "TRUE. Cardinal utility treats satisfaction as <strong>quantifiable</strong> in precise units."
     },
     {
       "statement": "Ordinal utility requires that we measure satisfaction in exact numerical units.",
       "answer": false,
-      "payload": "Ordinal utility only **ranks** preferences as first, second, or third."
+      "payload": "FALSE. Ordinal utility only <strong>ranks</strong> preferences as first, second, or third."
     },
     {
       "statement": "Both cardinal and ordinal utility assume the consumer is rational.",
       "answer": true,
-      "payload": "Correct. Both approaches rely on the assumption that consumers make **consistent** choices."
+      "payload": "TRUE. Both approaches rely on the assumption that consumers make <strong>consistent</strong> choices."
     },
     {
       "statement": "Scarcity and shortage mean exactly the same thing in economics.",
       "answer": false,
-      "payload": "Scarcity is **permanent** and universal, while shortage is temporary and specific."
+      "payload": "FALSE. Scarcity is <strong>permanent</strong> and universal, while shortage is temporary and specific."
     },
     {
       "statement": "Opportunity cost is the money spent on the chosen good.",
       "answer": false,
-      "payload": "Opportunity cost is the value of the **next-best alternative** forgone, not the money spent."
+      "payload": "FALSE. Opportunity cost is the value of the <strong>next-best alternative</strong> forgone, not the money spent."
     },
     {
       "statement": "Even wealthy countries face the problem of scarcity.",
       "answer": true,
-      "payload": "Correct. Scarcity is permanent because human wants are **unlimited** and resources are finite."
+      "payload": "TRUE. Scarcity is permanent because human wants are <strong>unlimited</strong> and resources are finite."
     },
     {
       "statement": "A rational consumer stops consuming when marginal utility becomes negative.",
       "answer": true,
-      "payload": "Correct. No rational consumer buys a unit that **reduces** total satisfaction."
+      "payload": "TRUE. No rational consumer buys a unit that <strong>reduces</strong> total satisfaction."
     },
     {
-      "statement": "At consumer equilibrium, the marginal utility per birr spent is equal for all goods purchased.",
+      "statement": "At consumer equilibrium, MUx/Px equals MUy/Py for all goods purchased.",
       "answer": true,
-      "payload": "Correct. A rational consumer allocates income so that **MUx divided by Px equals MUy divided by Py**."
+      "payload": "TRUE. A rational consumer allocates income so that <strong>MUx/Px = MUy/Py</strong>."
     },
     {
-      "statement": "If MUx divided by Px is greater than MUy divided by Py, the consumer should buy less of good X.",
+      "statement": "If MUx/Px > MUy/Py, the consumer should buy less of good X.",
       "answer": false,
-      "payload": "The consumer should buy **more** of good X until the ratios are equal."
+      "payload": "FALSE. The consumer should buy <strong>more</strong> of good X until the ratios are equal."
     },
     {
       "statement": "The law of diminishing marginal utility states that total utility decreases with each additional unit consumed.",
       "answer": false,
-      "payload": "The law states that **marginal** utility decreases, not total utility."
+      "payload": "FALSE. The law states that <strong>marginal</strong> utility decreases, not total utility."
     },
     {
       "statement": "A consumer with a budget of 10 birr can be in equilibrium while spending only 8 birr.",
       "answer": false,
-      "payload": "Consumer equilibrium requires the **entire budget** to be spent."
+      "payload": "FALSE. Consumer equilibrium requires the <strong>entire budget</strong> to be spent."
     },
     {
       "statement": "Cardinal utility theory assumes diminishing marginal utility.",
       "answer": true,
-      "payload": "Correct. Cardinal utility explicitly assumes that each additional unit adds **less** satisfaction."
+      "payload": "TRUE. Cardinal utility explicitly assumes that each additional unit adds <strong>less</strong> satisfaction."
     },
     {
       "statement": "Ordinal utility theory does not assume diminishing marginal utility.",
       "answer": true,
-      "payload": "Correct. Ordinal utility relies on ranking preferences, **not** on diminishing marginal utility."
+      "payload": "TRUE. Ordinal utility relies on ranking preferences, <strong>not</strong> on diminishing marginal utility."
     },
     {
       "statement": "The first cup of coffee in an Ethiopian coffee ceremony gives the highest marginal utility.",
       "answer": true,
-      "payload": "Correct. The law of diminishing marginal utility means the **first** unit typically yields the greatest extra satisfaction."
+      "payload": "TRUE. The law of diminishing marginal utility means the <strong>first</strong> unit typically yields the greatest extra satisfaction."
     },
     {
       "statement": "Shortage is a permanent condition caused by unlimited wants and limited resources.",
       "answer": false,
-      "payload": "Shortage is **temporary** and market-specific; scarcity is the permanent condition."
+      "payload": "FALSE. Shortage is <strong>temporary</strong> and market-specific; scarcity is the permanent condition."
     }
   ]
 }

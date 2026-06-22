@@ -1,0 +1,107 @@
+{
+  "id": "banking-growth",
+  "title": "Banking, Finance & Economic Growth",
+  "description": "Ethiopian banking institutions, financial intermediaries, economic growth vs development, and the business cycle",
+  "questions": [
+    {
+      "statement": "Banks act as intermediaries between depositors and borrowers.",
+      "answer": true,
+      "payload": "TRUE. Banks channel funds from savers to those who need <strong>loans</strong> for investment."
+    },
+    {
+      "statement": "The National Bank of Ethiopia takes deposits from individual members of the public.",
+      "answer": false,
+      "payload": "FALSE. NBE is a <strong>central bank</strong> that regulates the system; it does not take public deposits."
+    },
+    {
+      "statement": "The Commercial Bank of Ethiopia takes public deposits and gives loans to households and firms.",
+      "answer": true,
+      "payload": "TRUE. CBE is a <strong>commercial bank</strong> that handles everyday deposit and lending activities."
+    },
+    {
+      "statement": "The Development Bank of Ethiopia provides long-term project loans for agriculture and industry.",
+      "answer": true,
+      "payload": "TRUE. DBE specialises in <strong>project-based lending</strong> for development sectors."
+    },
+    {
+      "statement": "Modern banking in Ethiopia started in 1991.",
+      "answer": false,
+      "payload": "FALSE. Modern banking began in <strong>1905</strong> with the Bank of Abyssinia under Emperor Menelik II."
+    },
+    {
+      "statement": "Microfinance institutions in Ethiopia typically require collateral before giving loans.",
+      "answer": false,
+      "payload": "FALSE. Microfinance provides small loans <strong>without collateral</strong> using group lending and peer pressure."
+    },
+    {
+      "statement": "Iqub is an indigenous rotating savings group where members contribute regularly and take turns receiving the pooled money.",
+      "answer": true,
+      "payload": "TRUE. Iqub is based on <strong>social ties</strong> with low administrative costs and no minimum threshold."
+    },
+    {
+      "statement": "Iddir is primarily an investment club for generating profit among members.",
+      "answer": false,
+      "payload": "FALSE. Iddir is a mutual assistance group mainly for <strong>funeral and emergency expenses</strong>."
+    },
+    {
+      "statement": "Economic growth and economic development mean exactly the same thing.",
+      "answer": false,
+      "payload": "FALSE. Growth is quantitative <strong>GDP increase</strong>; development is broader improvement in living standards."
+    },
+    {
+      "statement": "Economic growth is necessary but not sufficient for economic development.",
+      "answer": true,
+      "payload": "TRUE. A country can grow without developing if inequality rises and the poor see <strong>no benefit</strong>."
+    },
+    {
+      "statement": "GDP per capita is a perfect measure of a country's welfare.",
+      "answer": false,
+      "payload": "FALSE. GDP per capita ignores income distribution, home production, environmental damage, and <strong>leisure time</strong>."
+    },
+    {
+      "statement": "GDP per capita counts home production such as cooking and farming for own use.",
+      "answer": false,
+      "payload": "FALSE. GDP per capita <strong>excludes</strong> home production, informal sector activity, and volunteer work."
+    },
+    {
+      "statement": "The business cycle is a regular and predictable fluctuation in economic activity.",
+      "answer": false,
+      "payload": "FALSE. The business cycle is <strong>irregular</strong> and largely unpredictable in timing and severity."
+    },
+    {
+      "statement": "During a boom, output, employment, prices, and investment are all rising.",
+      "answer": true,
+      "payload": "TRUE. A boom is the peak phase where all major economic variables move <strong>upward</strong>."
+    },
+    {
+      "statement": "During a depression, investment is at its lowest and unemployment is at its highest.",
+      "answer": true,
+      "payload": "TRUE. Depression is the trough where confidence, output, and investment hit <strong>rock bottom</strong>."
+    },
+    {
+      "statement": "During a recession, all economic variables fall immediately and simultaneously.",
+      "answer": false,
+      "payload": "FALSE. Recession is a <strong>slowdown</strong>; variables decelerate rather than all crashing at once."
+    },
+    {
+      "statement": "Agriculture employs the majority of Ethiopians and remains rain-dependent.",
+      "answer": true,
+      "payload": "TRUE. Agriculture is the largest employer and is vulnerable to <strong>drought</strong> and climate variability."
+    },
+    {
+      "statement": "Services is the fastest-growing sector in Ethiopia's economy.",
+      "answer": true,
+      "payload": "TRUE. The services sector including trade, finance, and telecom has been the <strong>fastest-growing</strong> sector."
+    },
+    {
+      "statement": "Structural transformation means shifting resources from industry to agriculture.",
+      "answer": false,
+      "payload": "FALSE. Structural transformation shifts labour from low-productivity <strong>agriculture</strong> to industry and services."
+    },
+    {
+      "statement": "Ethiopia's industrial parks policy includes locations such as Bole Lemi and Hawassa.",
+      "answer": true,
+      "payload": "TRUE. Industrial parks are a key government strategy to promote <strong>export-led manufacturing</strong>."
+    }
+  ]
+}

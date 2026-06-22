@@ -1,0 +1,107 @@
+{
+  "id": "policy-market-failure",
+  "title": "Policy, Market Failure & Ethiopian Reforms",
+  "description": "Market failures, fiscal and monetary policy, taxation, and Ethiopia's macroeconomic reforms",
+  "questions": [
+    {
+      "statement": "Public goods are non-excludable and non-rival in consumption.",
+      "answer": true,
+      "payload": "TRUE. National defence and street lighting are examples because no one can be <strong>excluded</strong> and use by one does not reduce availability."
+    },
+    {
+      "statement": "The free market tends to overproduce public goods because they are profitable.",
+      "answer": false,
+      "payload": "FALSE. The free market <strong>underprovides</strong> public goods due to the free-rider problem."
+    },
+    {
+      "statement": "A negative externality such as factory pollution leads to overproduction by the free market.",
+      "answer": true,
+      "payload": "TRUE. Producers ignore social costs, so output exceeds the <strong>socially optimal</strong> level."
+    },
+    {
+      "statement": "Education creates a positive externality, so the free market tends to underproduce it.",
+      "answer": true,
+      "payload": "TRUE. The social benefit of education exceeds the private benefit, leading to <strong>underproduction</strong>."
+    },
+    {
+      "statement": "A monopoly restricts output and raises price above the competitive level, creating inefficiency.",
+      "answer": true,
+      "payload": "TRUE. Monopoly power causes <strong>deadweight loss</strong> by producing less than the socially optimal quantity."
+    },
+    {
+      "statement": "Fiscal policy refers to the central bank's control of money supply and interest rates.",
+      "answer": false,
+      "payload": "FALSE. That is <strong>monetary policy</strong>; fiscal policy uses government taxation and spending."
+    },
+    {
+      "statement": "Expansionary fiscal policy involves cutting taxes and increasing government spending.",
+      "answer": true,
+      "payload": "TRUE. This stimulates aggregate demand and is used during <strong>recession</strong>."
+    },
+    {
+      "statement": "Contractionary fiscal policy is used to reduce unemployment during a recession.",
+      "answer": false,
+      "payload": "FALSE. Contractionary policy controls <strong>inflation</strong>; expansionary policy reduces unemployment."
+    },
+    {
+      "statement": "Monetary policy in Ethiopia is controlled by the National Bank of Ethiopia.",
+      "answer": true,
+      "payload": "TRUE. The NBE sets interest rates, controls money supply, and regulates <strong>commercial banks</strong>."
+    },
+    {
+      "statement": "Open market operations involve the government directly setting prices for all goods.",
+      "answer": false,
+      "payload": "FALSE. OMOs involve the central bank <strong>buying and selling government securities</strong> to adjust money supply."
+    },
+    {
+      "statement": "A progressive tax takes a higher proportion of income from higher earners.",
+      "answer": true,
+      "payload": "TRUE. Progressive taxes like personal income tax reduce <strong>income inequality</strong>."
+    },
+    {
+      "statement": "VAT is a direct tax paid by the person on whom it is originally levied.",
+      "answer": false,
+      "payload": "FALSE. VAT is an <strong>indirect tax</strong> shifted to consumers through higher prices."
+    },
+    {
+      "statement": "VAT tends to be regressive because it takes a larger share of income from poorer households.",
+      "answer": true,
+      "payload": "TRUE. Poorer households spend a <strong>higher proportion</strong> of their income on goods subject to VAT."
+    },
+    {
+      "statement": "A regressive tax takes a lower effective rate from higher earners.",
+      "answer": true,
+      "payload": "TRUE. Regressive taxes worsen inequality because the poor pay a <strong>higher share</strong> of their income."
+    },
+    {
+      "statement": "Adam Smith's canons of taxation include equity, certainty, convenience, and economy.",
+      "answer": true,
+      "payload": "TRUE. These four principles ensure taxes are fair, predictable, easy to pay, and <strong>cheap to collect</strong>."
+    },
+    {
+      "statement": "Ethiopia had a free market economy under the Derg regime from 1974 to 1991.",
+      "answer": false,
+      "payload": "FALSE. The Derg ran a <strong>command or socialist economy</strong> with state ownership and central planning."
+    },
+    {
+      "statement": "Ethiopia's transition to a market-oriented economy began after 1991 under the EPRDF.",
+      "answer": true,
+      "payload": "TRUE. Post-1991 reforms included liberalisation, privatisation, and allowing <strong>private investment</strong>."
+    },
+    {
+      "statement": "Under the Derg, land and major firms were nationalised and foreign markets were largely closed.",
+      "answer": true,
+      "payload": "TRUE. The Derg pursued state control, nationalisation, and <strong>isolation</strong> from global markets."
+    },
+    {
+      "statement": "Information asymmetry occurs when all parties in a transaction have equal information.",
+      "answer": false,
+      "payload": "FALSE. Information asymmetry means one party has <strong>more information</strong> than the other."
+    },
+    {
+      "statement": "Merit goods like healthcare and education are goods that society wants more of than the free market provides.",
+      "answer": true,
+      "payload": "TRUE. The free market underprovides merit goods because their social benefits exceed <strong>private benefits</strong>."
+    }
+  ]
+}

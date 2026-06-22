@@ -6,102 +6,102 @@
     {
       "statement": "Demand is simply the desire to buy a good at any price.",
       "answer": false,
-      "payload": "Demand requires both **willingness and ability** to buy at a given price."
+      "payload": "FALSE. Demand requires both <strong>willingness and ability</strong> to buy at a given price."
     },
     {
       "statement": "The law of demand states that price and quantity demanded are directly related.",
       "answer": false,
-      "payload": "The law of demand states they are **inversely** related."
+      "payload": "FALSE. The law of demand states they are <strong>inversely</strong> related."
     },
     {
       "statement": "A rise in consumer income shifts the demand curve to the right for a normal good.",
       "answer": true,
-      "payload": "Correct. Higher income increases demand for normal goods at **every** price."
+      "payload": "TRUE. Higher income increases demand for normal goods at <strong>every</strong> price."
     },
     {
       "statement": "A change in the good's own price causes a shift of the entire demand curve.",
       "answer": false,
-      "payload": "A price change causes **movement along** the curve; only other factors shift the curve."
+      "payload": "FALSE. A price change causes <strong>movement along</strong> the curve; only other factors shift the curve."
     },
     {
       "statement": "When the price of bread rises, the demand for injera will likely shift right if they are substitutes.",
       "answer": true,
-      "payload": "Correct. If bread and injera are substitutes, higher bread prices **increase** injera demand."
+      "payload": "TRUE. If bread and injera are substitutes, higher bread prices <strong>increase</strong> injera demand."
     },
     {
       "statement": "At market equilibrium, quantity demanded is always greater than quantity supplied.",
       "answer": false,
-      "payload": "At equilibrium, quantity demanded **equals** quantity supplied exactly."
+      "payload": "FALSE. At equilibrium, quantity demanded <strong>equals</strong> quantity supplied exactly."
     },
     {
       "statement": "A price floor set above equilibrium creates a shortage in the market.",
       "answer": false,
-      "payload": "A price floor above equilibrium causes **surplus** because quantity supplied exceeds quantity demanded."
+      "payload": "FALSE. A price floor above equilibrium causes <strong>surplus</strong> because Qs > Qd."
     },
     {
       "statement": "If the government fixes teff price at 75 birr when equilibrium is 60 birr, a surplus will occur.",
       "answer": true,
-      "payload": "Correct. At 75 birr, suppliers want to sell **more** than consumers want to buy."
+      "payload": "TRUE. At 75 birr, suppliers want to sell <strong>more</strong> than consumers want to buy."
     },
     {
       "statement": "The demand for insulin is elastic because many substitutes are available.",
       "answer": false,
-      "payload": "Insulin has **no substitutes** and is a life-or-death necessity, so demand is inelastic."
+      "payload": "FALSE. Insulin has <strong>no substitutes</strong> and is a life-or-death necessity, so demand is inelastic."
     },
     {
       "statement": "Luxury hotel stays in Addis Ababa tend to have elastic demand.",
       "answer": true,
-      "payload": "Correct. Luxury hotels have many alternatives and are **not necessities**, making demand elastic."
+      "payload": "TRUE. Luxury hotels have many alternatives and are <strong>not necessities</strong>, making demand elastic."
     },
     {
       "statement": "The cross-price elasticity between coffee and tea is likely to be negative.",
       "answer": false,
-      "payload": "Coffee and tea are substitutes, so their cross-price elasticity is **positive**."
+      "payload": "FALSE. Coffee and tea are substitutes, so their cross-price elasticity is <strong>positive</strong>."
     },
     {
       "statement": "An income elasticity of 3 means the good is a normal good with strong income sensitivity.",
       "answer": true,
-      "payload": "Correct. A positive income elasticity above 1 indicates a **luxury** normal good."
+      "payload": "TRUE. A positive income elasticity above 1 indicates a <strong>luxury</strong> normal good."
     },
     {
       "statement": "An income elasticity of 3 tells us that price demand for the good is elastic.",
       "answer": false,
-      "payload": "Income elasticity measures responsiveness to **income** changes, not price changes."
+      "payload": "FALSE. Income elasticity measures responsiveness to <strong>income</strong> changes, not price changes."
     },
     {
       "statement": "Salt has inelastic demand because it has no close substitutes and takes a tiny share of the budget.",
       "answer": true,
-      "payload": "Correct. Necessities with no substitutes typically have **inelastic** demand."
+      "payload": "TRUE. Necessities with no substitutes typically have <strong>inelastic</strong> demand."
     },
     {
       "statement": "When demand increases and supply decreases, equilibrium price will rise.",
       "answer": true,
-      "payload": "Correct. A rightward demand shift and leftward supply shift both push price **upward**."
+      "payload": "TRUE. A rightward demand shift and leftward supply shift both push price <strong>upward</strong>."
     },
     {
       "statement": "A surplus occurs when the market price is below the equilibrium level.",
       "answer": false,
-      "payload": "A surplus occurs when price is **above** equilibrium, causing quantity supplied to exceed quantity demanded."
+      "payload": "FALSE. A surplus occurs when price is <strong>above</strong> equilibrium, causing Qs > Qd."
     },
     {
       "statement": "The law of supply states that higher prices lead to lower quantities supplied.",
       "answer": false,
-      "payload": "The law of supply states that higher prices lead to **higher** quantities supplied."
+      "payload": "FALSE. The law of supply states that higher prices lead to <strong>higher</strong> quantities supplied."
     },
     {
       "statement": "If the price of teff rises, we say the quantity demanded of teff has decreased.",
       "answer": true,
-      "payload": "Correct. A price change causes a change in **quantity demanded**, not a shift in demand."
+      "payload": "TRUE. A price change causes a change in <strong>quantity demanded</strong>, not a shift in demand."
     },
     {
       "statement": "Expectations of future price rises will shift the current demand curve to the left.",
       "answer": false,
-      "payload": "If consumers expect higher future prices, current demand shifts **rightward**."
+      "payload": "FALSE. If consumers expect higher future prices, current demand shifts <strong>rightward</strong>."
     },
     {
       "statement": "Brand-name sports shoes have elastic demand because many competing brands exist.",
       "answer": true,
-      "payload": "Correct. Many substitutes and non-essential status make brand-name shoe demand **elastic**."
+      "payload": "TRUE. Many substitutes and non-essential status make brand-name shoe demand <strong>elastic</strong>."
     }
   ]
 }

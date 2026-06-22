@@ -1,0 +1,107 @@
+{
+  "id": "production-costs",
+  "title": "Production & Costs",
+  "description": "Short-run production, cost curves, and the relationship between marginal product and marginal cost",
+  "questions": [
+    {
+      "statement": "In the short run, at least one input such as capital or machinery is fixed.",
+      "answer": true,
+      "payload": "TRUE. The short run is defined by having at least one <strong>fixed input</strong>."
+    },
+    {
+      "statement": "The long run is defined as a period of more than five years.",
+      "answer": false,
+      "payload": "FALSE. The long run is defined by <strong>all inputs being variable</strong>, not by calendar time."
+    },
+    {
+      "statement": "Total product reaches its peak when marginal product becomes zero.",
+      "answer": true,
+      "payload": "TRUE. TP is maximised when MP = 0, just as TU is maximised when MU = 0."
+    },
+    {
+      "statement": "Average product is calculated as total product divided by the number of workers.",
+      "answer": true,
+      "payload": "TRUE. AP = <strong>TP / Labour</strong>, representing output per worker."
+    },
+    {
+      "statement": "Marginal product is the extra output produced by adding one more worker.",
+      "answer": true,
+      "payload": "TRUE. MP = <strong>ΔTP / ΔL</strong>, measuring the addition from the last worker."
+    },
+    {
+      "statement": "When marginal product is rising, marginal cost is also rising.",
+      "answer": false,
+      "payload": "FALSE. MP and MC are <strong>mirror images</strong>; when MP rises, MC falls."
+    },
+    {
+      "statement": "When marginal product is at its maximum, marginal cost is at its minimum.",
+      "answer": true,
+      "payload": "TRUE. The MP-MC mirror rule means their turning points are <strong>opposite</strong>."
+    },
+    {
+      "statement": "A rational firm always operates in Stage III of production where marginal product is negative.",
+      "answer": false,
+      "payload": "FALSE. Rational firms operate in <strong>Stage II</strong> where MP is positive but falling."
+    },
+    {
+      "statement": "In Stage I of production, adding more workers is still highly profitable.",
+      "answer": true,
+      "payload": "TRUE. Stage I has rising MP, so each new worker adds <strong>more</strong> than the previous one."
+    },
+    {
+      "statement": "Total fixed cost changes as the level of output changes.",
+      "answer": false,
+      "payload": "FALSE. TFC is <strong>constant</strong> regardless of output level in the short run."
+    },
+    {
+      "statement": "The AFC curve is U-shaped due to the law of diminishing returns.",
+      "answer": false,
+      "payload": "FALSE. AFC falls <strong>continuously</strong> and is never U-shaped; it is not affected by diminishing returns."
+    },
+    {
+      "statement": "Average variable cost reaches its minimum at the output where MC crosses it.",
+      "answer": true,
+      "payload": "TRUE. The MC curve intersects both AVC and ATC at their <strong>minimum</strong> points."
+    },
+    {
+      "statement": "When MC is below ATC, ATC is falling.",
+      "answer": true,
+      "payload": "TRUE. MC pulls ATC <strong>down</strong> when it is below ATC, and pulls it up when above."
+    },
+    {
+      "statement": "When MC is above ATC, ATC is at its maximum.",
+      "answer": false,
+      "payload": "FALSE. When MC > ATC, ATC is <strong>rising</strong>, not at its maximum."
+    },
+    {
+      "statement": "Total cost equals total fixed cost plus total variable cost at every level of output.",
+      "answer": true,
+      "payload": "TRUE. <strong>TC = TFC + TVC</strong> by definition at every output level."
+    },
+    {
+      "statement": "The gap between ATC and AVC narrows as output increases because AFC falls.",
+      "answer": true,
+      "payload": "TRUE. ATC - AVC = AFC, and AFC <strong>falls continuously</strong> as output rises."
+    },
+    {
+      "statement": "Marginal cost can be calculated as the change in total cost divided by the change in output.",
+      "answer": true,
+      "payload": "TRUE. MC = <strong>ΔTC / ΔQ</strong>, which is also equal to ΔTVC / ΔQ since TFC is fixed."
+    },
+    {
+      "statement": "In the short run, a firm can change its factory size to increase output.",
+      "answer": false,
+      "payload": "FALSE. Factory size is fixed in the <strong>short run</strong>; it can only be changed in the long run."
+    },
+    {
+      "statement": "Average product is U-shaped, rising initially and then falling.",
+      "answer": true,
+      "payload": "TRUE. AP rises when MP is above it and falls when MP is <strong>below</strong> it."
+    },
+    {
+      "statement": "In Stage II of production, total product is falling.",
+      "answer": false,
+      "payload": "FALSE. In Stage II, TP is still <strong>rising</strong> but at a decreasing rate because MP is positive but falling."
+    }
+  ]
+}

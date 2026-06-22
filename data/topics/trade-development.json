@@ -1,0 +1,107 @@
+{
+  "id": "trade-development",
+  "title": "Trade, Development & Ethiopia's Sectors",
+  "description": "International trade theories, balance of payments, development indicators, and Ethiopian sectoral policies",
+  "questions": [
+    {
+      "statement": "Absolute advantage is the basis for international trade according to Ricardo.",
+      "answer": false,
+      "payload": "FALSE. <strong>Comparative advantage</strong> is the basis for trade, not absolute advantage."
+    },
+    {
+      "statement": "A country should specialise in producing goods where its opportunity cost is lowest.",
+      "answer": true,
+      "payload": "TRUE. Comparative advantage means specialising where <strong>opportunity cost</strong> is lowest."
+    },
+    {
+      "statement": "Ethiopia has an absolute advantage in coffee production compared to Germany.",
+      "answer": true,
+      "payload": "TRUE. Ethiopia can produce coffee with <strong>less labour</strong> and more suitable climate than Germany."
+    },
+    {
+      "statement": "A trade surplus means a country imports more than it exports.",
+      "answer": false,
+      "payload": "FALSE. A trade surplus means <strong>exports exceed imports</strong>."
+    },
+    {
+      "statement": "The export of coffee by Ethiopia appears in the current account of the balance of payments.",
+      "answer": true,
+      "payload": "TRUE. Goods exports are part of the <strong>current account</strong> under visible trade."
+    },
+    {
+      "statement": "Foreign direct investment is recorded in the capital account of the balance of payments.",
+      "answer": true,
+      "payload": "TRUE. FDI, portfolio investment, and loans are recorded in the <strong>capital account</strong>."
+    },
+    {
+      "statement": "A fixed exchange rate is determined entirely by market forces of supply and demand.",
+      "answer": false,
+      "payload": "FALSE. A fixed exchange rate is <strong>pegged by the government</strong>; floating rates are market-determined."
+    },
+    {
+      "statement": "HDI is a broader measure of development than GDP per capita because it includes health and education.",
+      "answer": true,
+      "payload": "TRUE. HDI combines life expectancy, schooling, and income into a <strong>composite index</strong>."
+    },
+    {
+      "statement": "Ethiopia's HDI in 2019 was approximately 0.485.",
+      "answer": true,
+      "payload": "TRUE. Ethiopia's HDI was around <strong>0.485</strong>, placing it in the low human development category."
+    },
+    {
+      "statement": "The MDGs consisted of 17 goals that applied to all countries universally.",
+      "answer": false,
+      "payload": "FALSE. The MDGs had <strong>8 goals</strong> focused mainly on developing countries."
+    },
+    {
+      "statement": "The SDGs replaced the MDGs in 2015 and consist of 17 goals.",
+      "answer": true,
+      "payload": "TRUE. The SDGs are broader, more ambitious, and apply to <strong>all countries</strong> universally."
+    },
+    {
+      "statement": "A Gini coefficient of 0 means perfect inequality.",
+      "answer": false,
+      "payload": "FALSE. Gini = 0 means <strong>perfect equality</strong>; Gini = 1 means perfect inequality."
+    },
+    {
+      "statement": "A Lorenz curve further from the diagonal indicates more income inequality.",
+      "answer": true,
+      "payload": "TRUE. The further the curve is from the 45-degree line, the <strong>more unequal</strong> the distribution."
+    },
+    {
+      "statement": "Absolute poverty means earning less than the national average income.",
+      "answer": false,
+      "payload": "FALSE. Absolute poverty means income below a <strong>minimum threshold</strong> for basic survival."
+    },
+    {
+      "statement": "Relative poverty means income significantly below the average in a given society.",
+      "answer": true,
+      "payload": "TRUE. Relative poverty is measured against the <strong>average living standard</strong> of that society."
+    },
+    {
+      "statement": "ADLI stands for Agricultural Development Led Industrialisation.",
+      "answer": true,
+      "payload": "TRUE. ADLI has been Ethiopia's main agricultural strategy since <strong>1991</strong>."
+    },
+    {
+      "statement": "Ethiopia's agricultural strategy since 1991 has been Import Substitution Industrialisation.",
+      "answer": false,
+      "payload": "FALSE. Ethiopia's strategy is <strong>ADLI</strong>, using agriculture as the engine for industrial growth."
+    },
+    {
+      "statement": "Ethiopia expanded its universities from 2 in 1991 to over 50 today.",
+      "answer": true,
+      "payload": "TRUE. Rapid university expansion has been a hallmark of Ethiopia's <strong>education policy</strong>."
+    },
+    {
+      "statement": "The Health Extension Program uses community health workers to expand primary care.",
+      "answer": true,
+      "payload": "TRUE. The program has been instrumental in reducing <strong>maternal and child mortality</strong>."
+    },
+    {
+      "statement": "Comparative advantage is based on which country can produce a good using fewer resources.",
+      "answer": false,
+      "payload": "FALSE. That describes <strong>absolute advantage</strong>; comparative advantage is about lower opportunity cost."
+    }
+  ]
+}
