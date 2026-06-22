@@ -1,17 +1,12 @@
 [
   {
-    "id": "monetary-policy",
-    "title": "Monetary Policy",
-    "description": "Central bank tools, interest rates, money supply"
+    "id": "demand-supply-elasticity",
+    "title": "Demand, Supply & Elasticity",
+    "description": "Law of demand and supply, equilibrium, elasticity, and market movements"
   },
   {
-    "id": "demand-elasticity",
-    "title": "Demand & Elasticity",
-    "description": "Price elasticity, total revenue, demand curves"
-  },
-  {
-    "id": "market-structures",
-    "title": "Market Structures",
-    "description": "Perfect competition, monopoly, monopolistic competition"
+    "id": "consumer-theory",
+    "title": "Consumer Theory & Choice",
+    "description": "Utility, scarcity, opportunity cost, consumer equilibrium, and the law of diminishing marginal utility"
   }
 ]
